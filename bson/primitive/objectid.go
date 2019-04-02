@@ -20,6 +20,8 @@ import (
 	"io"
 	"sync/atomic"
 	"time"
+
+	strfmt "github.com/go-openapi/strfmt"
 )
 
 // ErrInvalidHex indicates that a hex string cannot be converted to an ObjectID.

@@ -13,6 +13,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"time"
+
+	strfmt "github.com/go-openapi/strfmt"
 )
 
 // Binary represents a BSON binary value.
@@ -34,6 +36,11 @@ type Undefined struct{}
 
 // DateTime represents the BSON datetime value.
 type DateTime int64
+
+// Validate returns true if
+func (id DateTime) Validate(formats strfmt.Registry) error {
+	return nil
+}
 
 // MarshalJSON marshal to time type
 func (d DateTime) MarshalJSON() ([]byte, error) {

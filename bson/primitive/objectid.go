@@ -59,6 +59,11 @@ func (id ObjectID) IsZero() bool {
 	return bytes.Equal(id[:], NilObjectID[:])
 }
 
+// Validate returns true if
+func (id ObjectID) Validate(formats strfmt.Registry) error {
+	return nil
+}
+
 // ObjectIDFromHex creates a new ObjectID from a hex string. It returns an error if the hex string is not a
 // valid ObjectID.
 func ObjectIDFromHex(s string) (ObjectID, error) {
